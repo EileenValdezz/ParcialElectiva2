@@ -1,6 +1,6 @@
 :root {
   --bg-color: #f8f8f8;
-  --text-color: #333;
+  --text-color: #222;
   --accent: #8ac6d1;
   --font-main: "Helvetica Neue", sans-serif;
 }
@@ -38,12 +38,13 @@ header h1 span {
 }
 
 .intro {
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto;
   text-align: center;
   padding: 1rem 2rem;
   font-size: 1.1rem;
   color: #555;
+  line-height: 1.6;
 }
 
 .gallery {
@@ -55,13 +56,14 @@ header h1 span {
 }
 
 .art-piece {
-  width: 180px;
-  height: 180px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, var(--color1), var(--color2));
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 18px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   animation: float 6s ease-in-out infinite;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
 }
 
 .art-piece img {
@@ -73,13 +75,12 @@ header h1 span {
 }
 
 .art-piece:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.art-piece:hover img {
+  transform: scale(1.05);
 }
 
 .quote {
